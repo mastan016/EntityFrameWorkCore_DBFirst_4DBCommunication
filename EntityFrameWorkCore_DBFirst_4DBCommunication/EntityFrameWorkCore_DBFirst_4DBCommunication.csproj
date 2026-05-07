@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="HotelManagementModels\" />
+    <Folder Include="MidLandModels\" />
   </ItemGroup>
 
 </Project>
