@@ -140,3 +140,12 @@ namespace EntityFrameWorkCore_DBFirst_4DBCommunication.Controllers
 
     }
 }
+
+
+/* To implement db first approach use this command
+      * ================================================
+      Scaffold-DbContext "Server=LAPTOP-3GC5IQ7F;Database=MIDLAND;User Id=sa;Password=123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir MidLandModels 
+      Scaffold-DbContext "Server=LAPTOP-3GC5IQ7F;Database=MIDLAND;User Id=sa;Password=123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir MidLandModels -force
+
+     ==================================================
+     */

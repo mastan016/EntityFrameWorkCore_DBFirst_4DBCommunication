@@ -19,6 +19,7 @@
   <ItemGroup>
     <Folder Include="HotelManagementModels\" />
     <Folder Include="MidLandModels\" />
+    <Folder Include="Northwind_DbModels\" />
   </ItemGroup>
 
 </Project>
