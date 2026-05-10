@@ -1,9 +1,11 @@
 using EntityFrameWorkCore_DBFirst_4DBCommunication.HotelManagementModels;
 using EntityFrameWorkCore_DBFirst_4DBCommunication.Interfaces;
 using EntityFrameWorkCore_DBFirst_4DBCommunication.MidLandModels;
+using EntityFrameWorkCore_DBFirst_4DBCommunication.Northwind_DbModels;
 using EntityFrameWorkCore_DBFirst_4DBCommunication.Repository;
 using EntityFrameWorkCore_DBFirst_4DBCommunication.Service;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +23,10 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("HotelManagementD
 builder.Services.AddDbContext<MidlandContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("MIDLANDDbFirstApproachDatabase")));
 
+builder.Services.AddDbContext<NorthwindDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("Northwind_DBDbFirstApproachDatabase")));
+
+
 
 
 
@@ -32,6 +38,11 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
 builder.Services.AddScoped<IOrderService, Orderservice>();
+
+//==============================================================================
+
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 
 //==============================================================================
 
